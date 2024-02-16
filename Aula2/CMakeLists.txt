@@ -1,24 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Project Name
-PROJECT(class1)
+PROJECT(class2)
 
 cmake_policy(SET CMP0072 NEW)
 
-# set(OpenGL_GL_PREFERENCE LEGACY)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-set(GLUT_LIBRARY /usr/lib/x86_64-linux-gnu/libglut.so)
-
-add_executable(${PROJECT_NAME} main.cpp
-		../Aula2/main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 find_package(OpenGL REQUIRED)
-include_directories(${OpenGL_INCLUDE_DIRS} /usr/include)
+include_directories(${OpenGL_INCLUDE_DIRS})
 link_directories(${OpenGL_LIBRARY_DIRS})
 add_definitions(${OpenGL_DEFINITIONS})
-
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
 
 if(NOT OPENGL_FOUND)
     message(ERROR " OPENGL not found!")
@@ -52,7 +46,7 @@ else (WIN32) #Linux and Mac
 	link_directories(${GLUT_LIBRARY_DIRS})
 	add_definitions(${GLUT_DEFINITIONS})
 	
-	target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+	target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} )
 	if(NOT GLUT_FOUND)
 	   message(ERROR ": GLUT not found!")
 	endif(NOT GLUT_FOUND)

@@ -8,6 +8,7 @@
 #include <math.h>
 #include <stdio.h>
 
+float cupRotation = 0;
 
 void changeSize(int w, int h)
 {
@@ -50,8 +51,10 @@ void renderScene(void) {
     glPushMatrix(); // Save current transformation state
     glScalef(scaleFactor, scaleFactor, scaleFactor); // Scale the teapot
 
+    glRotatef(cupRotation,0.0f,1.0f,0.0f);
     // Draw the teapot
     glutWireTeapot(1.0);
+    cupRotation += 1.0f;
 
     glPopMatrix(); // Restore previous transformation state
 
