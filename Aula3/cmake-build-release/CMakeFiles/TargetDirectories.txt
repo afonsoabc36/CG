@@ -1,3 +1,0 @@
-/home/afonsoabc36/Desktop/3 ano/2º Semestre/Computação Gráfica/CG/Aula3/cmake-build-release/CMakeFiles/class3.dir
-/home/afonsoabc36/Desktop/3 ano/2º Semestre/Computação Gráfica/CG/Aula3/cmake-build-release/CMakeFiles/edit_cache.dir
-/home/afonsoabc36/Desktop/3 ano/2º Semestre/Computação Gráfica/CG/Aula3/cmake-build-release/CMakeFiles/rebuild_cache.dir
